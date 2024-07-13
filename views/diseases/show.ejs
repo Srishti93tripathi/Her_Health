@@ -1,0 +1,45 @@
+<% layout("/layouts/showboilerplate.ejs") -%>
+<body>
+   <br><br><br><br>
+    <div class="row mt-3">
+        <div class="col-8 offset-3">
+            <h3><%= data[0].name %></h3>
+        </div>    
+        <div class="card col-6 offset-3 show-card">
+           <img src="<%= data[0].image %>" class="card-img-top show-img" alt="listing_image">
+           <div class="card-body">
+             <p class="card-text">
+              <b><%= data[0].description %></b> <br><br>
+              Symptoms:
+              <% for(let i=0;i<data[0].symptoms.length;i++) {%>
+                 <ul>
+                    <li><%= data[0].symptoms[i] %> </li>
+                 </ul>
+              <% } %>   
+              Causes:
+              <% for(let i=0;i<data[0].causes.length;i++) {%>
+                 <ul>
+                    <li><%= data[0].causes[i] %>  </li>
+                 </ul>
+              <% } %> 
+              Treatment:
+              <% for(let i=0;i<data[0].treatment.length;i++) {%>
+                 <ul>
+                    <li><%= data[0].treatment[i] %> </li>
+                 </ul>
+              <% } %>   
+              Precaution:
+              <% for(let i=0;i<data[0].precautions.length;i++) {%>
+                 <ul>
+                    <li><%= data[0].precautions[i] %>  </li>
+                 </ul>
+              <% } %>   
+             <br>
+             Source:
+             <a href="<%= data[0].source %>"><%= data[0].source %></a>
+           </p>
+           </div>
+         
+        </div>
+    </div> 
+</body>

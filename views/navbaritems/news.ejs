@@ -1,0 +1,26 @@
+<% layout("/layouts/showboilerplate.ejs") -%>
+<body>
+    <br><br><br><br>
+    <b><h2 style="color: rgb(176 33 121); ">Recent News</h2><br></b>
+    <% for(let news of allNews) { %>
+        
+        <div class="card mb-3" style="height: 250px  !important; width: 1500px !important;" >
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="<%= news.image %>" class="img-fluid rounded-start" alt="..."  style="height: 200px !important; width: 400px !important;">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title"><%= news.title %></h5>
+                  <p class="card-text"><%= news.description %></p>
+                  <p class="card-text"><small class="text-body-secondary"><%= news.publisDate %></small></p>
+                  <p class="card-text"><small class="text-body-secondary"><%= news.tags %></small></p>
+                  <p class="card-text"><small class="text-body-secondary"><%= news.source %></small></p>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+          
+     <% } %>   
+</body>
