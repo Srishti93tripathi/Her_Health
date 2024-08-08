@@ -108,7 +108,7 @@ body {
 }
 
 .h1 {
-  margin-left: 400px;
+  margin-left: 550px;
 }
 
 .wc-input-group-action {
@@ -116,7 +116,8 @@ body {
   width: 100%;
   height: 56px;
   max-width: 75%;
-  margin: 0 auto;
+  /* margin: 0 auto; */
+  margin-left: 300px;
 
 }
 
@@ -435,7 +436,7 @@ a:-webkit-any-link {
 
 /* ....end query section... */
 .h12 {
-  margin-left: 500px;
+  margin-left: 600px;
 }
 
 .main-box1 {
